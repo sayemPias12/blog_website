@@ -77,9 +77,7 @@ body {
   color: #1f3a56; /* Darker, contrasting color on hover */
 }
 
-.banner {
-  padding: 50px 10px;
-}
+
 
 .image {
   width: 550px;
@@ -94,6 +92,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 95vh;
+  padding: 50px 10px;
 }
 
 .banner article {
@@ -124,11 +123,29 @@ body {
 
 /* for media  */
 @media screen and (max-width: 992px) {
+  .banner{
+    flex-direction: column;
+  }
+  .banner article {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  .Artical_heading{
+    font-size: 3rem;
+  }
+
 }
 
 @media screen and (max-width: 770px) {
   html {
     font-size: 55%;
+  }
+  .banner article{
+    width: 80%;
   }
 }
 
@@ -142,5 +159,16 @@ body {
   }
   #head {
     flex-direction: column;
+  }
+  .banner{
+    min-height: auto;
+  }
+  .banner article{
+    width: 90%;
+    
+  }
+  .image{
+  max-width: 100%;
+
   }
 }
