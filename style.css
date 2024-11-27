@@ -11,14 +11,14 @@
 }
 
 html {
-  background-color: #f8f9fa; /* Light neutral background */
+  background-color: #f4f6f9; /* Light gray background for the overall page */
   scroll-behavior: smooth;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 62.5%;
 }
 
 body {
-  background-color: #ffffff; /* White background for content area */
+  background-color: #ffffff; /* Clean white background for content area */
   width: 100rem;
   max-width: 100%;
   box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.1),
@@ -30,8 +30,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #1e293b; /* Dark navy blue for header */
-  color: #f8f9fa; /* Light neutral text color */
+  background-color: #2d3e50; /* Muted dark blue-gray for header */
+  color: #ecf0f1; /* Light text color for contrast */
   padding: 20px 10px;
   position: sticky;
   top: 0;
@@ -40,12 +40,12 @@ body {
 }
 
 .logo-fig {
-  border: 2px solid #f8f9fa; /* Matches text for consistency */
+  border: 2px solid #ecf0f1; /* Light text color for logo border */
 }
 
 .logo {
   font-size: 40px;
-  color: #38bdf8; 
+  color: #5ab9ea; /* Soft, professional blue */
 }
 
 .Nav {
@@ -60,47 +60,87 @@ body {
 }
 
 .Nav li:hover {
-  background-color: #38bdf8;
+  background-color: #5ab9ea; /* Blue for hover effect */
   transform: scale(1.1);
   border-radius: 6px;
-  color: #1e293b;
-  
+  color: #2d3e50; /* Dark text color on hover */
 }
 
 .link {
   font-size: 18px;
-  color: #f8f9fa;
+  color: #ecf0f1; /* Light gray text for links */
   transition: color 0.3s ease;
   cursor: pointer;
 }
-.link:hover {
-    color: #1c054b; 
-  }
 
- @media screen and (max-width: 992px) {
-  
- }
- @media screen and (max-width: 770px) {
-  html
-  {
+.link:hover {
+  color: #1f3a56; /* Darker, contrasting color on hover */
+}
+
+.banner {
+  padding: 50px 10px;
+}
+
+.image {
+  width: 550px;
+  height: 550px;
+  border: 2px solid #34495e; /* Darker gray border for more contrast */
+ /* Light border that matches text color */
+  /* Dark border for the image */
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+}
+
+.banner article {
+  flex-basis: 50%;
+  margin: 10px;
+}
+
+.Artical_heading {
+  display: inline-block;
+  background-color: #2d3e50; /* Dark background for heading */
+  color: #ecf0f1; /* Light text for the heading */
+  margin-bottom: 15px;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 4rem;
+}
+
+.description {
+  font-size: 18px;
+  text-align: justify;
+  color: #34495e; /* Subtle dark gray for text */
+}
+
+.banner aside {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+/* for media  */
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 770px) {
+  html {
     font-size: 55%;
   }
-  
- }
- @media screen and (max-width: 600px) {
-  html
-  {
+}
+
+@media screen and (max-width: 600px) {
+  html {
     font-size: 45%;
   }
   .Nav {
     flex-direction: column;
     padding-left: 20px;
   }
-  #head{
+  #head {
     flex-direction: column;
   }
-
-  
- }
- 
-
+}
