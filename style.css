@@ -11,27 +11,33 @@
 }
 
 html {
-  background-color: #f4f6f9; /* Light gray background for the overall page */
+  background-color: #1e1e2f; /* Dark muted blue-gray */
   scroll-behavior: smooth;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 62.5%;
 }
 
 body {
-  background-color: #ffffff; /* Clean white background for content area */
+  background-color: #838181; /* Slightly lighter dark background */
   width: 100rem;
   max-width: 100%;
-  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.1),
-    -0.1rem 0rem 0.2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.4),
+    -0.1rem 0rem 0.2rem rgba(0, 0, 0, 0.4);
   margin: auto;
+}
+
+.brt {
+  background-color: rgba(73, 86, 103, 0.3); /* Muted slate blue tint */
+  border: none;
+  border-radius: 6px;
 }
 
 #head {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #2d3e50; /* Muted dark blue-gray for header */
-  color: #ecf0f1; /* Light text color for contrast */
+  background-color: #181823; /* Deep charcoal header */
+  color: #ededed; /* Light gray for text */
   padding: 20px 10px;
   position: sticky;
   top: 0;
@@ -40,12 +46,12 @@ body {
 }
 
 .logo-fig {
-  border: 2px solid #ecf0f1; /* Light text color for logo border */
+  border: 2px solid #495667; /* Subtle muted slate blue border */
 }
 
 .logo {
   font-size: 40px;
-  color: #5ab9ea; /* Soft, professional blue */
+  color: #e63946; /* Classy muted red for contrast */
 }
 
 .Nav {
@@ -60,31 +66,27 @@ body {
 }
 
 .Nav li:hover {
-  background-color: #5ab9ea; /* Blue for hover effect */
+  background-color: #495667; /* Slate blue hover effect */
   transform: scale(1.1);
   border-radius: 6px;
-  color: #2d3e50; /* Dark text color on hover */
+  color: #181823; /* Charcoal text on hover */
 }
 
 .link {
   font-size: 18px;
-  color: #ecf0f1; /* Light gray text for links */
+  color: #ededed; /* Light gray text for links */
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
 .link:hover {
-  color: #1f3a56; /* Darker, contrasting color on hover */
+  color: #f4a261; /* Muted soft orange hover */
 }
-
-
 
 .image {
   width: 550px;
   height: 550px;
-  border: 2px solid #34495e; /* Darker gray border for more contrast */
- /* Light border that matches text color */
-  /* Dark border for the image */
+  border: 2px solid #495667; /* Subtle slate blue border */
 }
 
 .banner {
@@ -102,8 +104,8 @@ body {
 
 .Artical_heading {
   display: inline-block;
-  background-color: #2d3e50; /* Dark background for heading */
-  color: #ecf0f1; /* Light text for the heading */
+  background-color: #181823; /* Deep charcoal heading */
+  color: #ededed; /* Light gray text */
   margin-bottom: 15px;
   padding: 10px;
   font-weight: bolder;
@@ -113,7 +115,7 @@ body {
 .description {
   font-size: 18px;
   text-align: justify;
-  color: #34495e; /* Subtle dark gray for text */
+  color: #ade9eb; /* Muted teal for text */
 }
 
 .banner aside {
@@ -121,9 +123,83 @@ body {
   text-align: center;
 }
 
-/* for media  */
+/* about */
+/* about */
+/* about */
+.about {
+  background-color: #2c2c3a; /* Dark background for consistency */
+  color: #c6fdff; /* Muted teal for text */
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 60vh;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  max-width: 400px;
+  border-radius: 10px;
+  background-color: #393946; /* Subtle muted gray for card backgrounds */
+  padding: 2rem 1.5rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.3s ease;
+  gap: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow */
+}
+
+.cardHeader {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f4a261; /* Muted soft orange for headers */
+}
+
+.cardDescription {
+  font-size: 16px;
+  color: #ededed; /* Light gray for descriptions */
+}
+
+.cBtn {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #457b9d; /* Muted blue for buttons */
+  color: #ffffff; /* White text for buttons */
+
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.cBtn:hover {
+  background-color: #1d3557; /* Slightly darker blue on hover */
+}
+.secHeading {
+  font-size: 5rem;
+  font-family: "Italiano", cursive;
+}
+
+/* for media */
 @media screen and (max-width: 992px) {
-  .banner{
+  .banner {
     flex-direction: column;
   }
   .banner article {
@@ -134,18 +210,29 @@ body {
     justify-content: center;
     padding-bottom: 40px;
   }
-  .Artical_heading{
+  .Artical_heading {
     font-size: 3rem;
   }
-
+  .card p {
+    font-size: large;
+  }
 }
 
 @media screen and (max-width: 770px) {
   html {
     font-size: 55%;
   }
-  .banner article{
+  .banner article {
     width: 80%;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    min-width: 90%;
+  }
+  .card p {
+    font-size: large;
   }
 }
 
@@ -160,15 +247,25 @@ body {
   #head {
     flex-direction: column;
   }
-  .banner{
+  .banner {
     min-height: auto;
   }
-  .banner article{
+  .banner article {
     width: 90%;
-    
   }
-  .image{
-  max-width: 100%;
-
+  .image {
+    max-width: 100%;
+  }
+  .cards {
+    min-width: 90%;
+  }
+  .about {
+    min-height: auto;
+  }
+  .card {
+    min-width: 90%;
+  }
+  .card p {
+    font-size: large;
   }
 }
